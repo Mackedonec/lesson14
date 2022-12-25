@@ -140,21 +140,34 @@ function evenFn(n) {
  * Использование операторов if, switch – запрещено.
  */
 
-// console.log('-1 :', ageClassification(-1)); // -1 : null
 
-// console.log('5 :', ageClassification(5)); // 5 : детский возраст
+function ageClassification(n) {
+    return n =
+        n < 0 ? null
+            : n < 24.01 ? 'детский возраст'
+                : n < 44.01 ? 'молодой возраст'
+                    : n < 65.01 ? 'средний возраст'
+                        : n < 75.01 ? 'пожилой возраст'
+                            : n < 90.01 ? 'старческий возраст'
+                                : n < 122.01 ? 'долгожители'
+                                    : n < 150.01 ? null : n > 150.02
+}
 
-// console.log('34 :', ageClassification(34)); // 34 : молодой возраст
-
-// console.log('50 :', ageClassification(50)); // 50 : средний возраст
-
-// console.log('65.1 :', ageClassification(65.1)); // 65.1 : пожилой возраст
-
-// console.log('80 :', ageClassification(80)); // 80 : старческий возраст
-
-// console.log('110 :', ageClassification(110)); // 110 : долгожители
-
-// console.log('130 :', ageClassification(130)); // 130 : null
+console.log('    -1 :', ageClassification(-1)); // -1 : null
+console.log('     1 :', ageClassification(1)); // 1 : детский возраст
+console.log('    24 :', ageClassification(24)); // 24 : детский возраст
+console.log(' 24.01 :', ageClassification(24.01)); // 24.01 : молодой возраст
+console.log('    44 :', ageClassification(44)); // 44 : молодой возраст
+console.log(' 44.01 :', ageClassification(44.01)); // 44.01 : средний возраст
+console.log('    65 :', ageClassification(65)); // 65 : средний возраст
+console.log('  65.1 :', ageClassification(65.1)); // 65.1 : пожилой возраст
+console.log('    75 :', ageClassification(75)); // 75 : пожилой возраст
+console.log(' 75.01 :', ageClassification(75.01)); // 75.01 : старческий возраст
+console.log('    90 :', ageClassification(90)); // 90 : старческий возраст
+console.log(' 90.01 :', ageClassification(90.01)); // 90.01 : долгожители
+console.log('   122 :', ageClassification(122)); // 122 : долгожители
+console.log('122.01 :', ageClassification(122.01)); // 122.01 : null
+console.log('   150 :', ageClassification(150)); // 150 : null
 
 /*
  * Блок тестирования:
