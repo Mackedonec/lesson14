@@ -51,13 +51,18 @@ console.log("🚀 ~ file: main.js:18 ~ userObj", userObj.fullName());
 /* eslint-disable capitalized-comments */
 // console.log(defUpperStr('My text')); // MY TEXT
 
+// var myStr = 'My text'
+// function defUpperStr(myStr) {
+//     return (myStr || 'Default text').toUpperCase();
+// }
+
 function defUpperStr(myStr) {
     return (myStr || 'Default text').toUpperCase();
 }
 
 // console.log(defUpperStr()); // DEFAULT TEXT
 
-console.log("🚀 ~ file: main.js:57 ~ defUpperStr ~ defUpperStr", defUpperStr('Some text'))
+console.log("🚀 ~ file: main.js:57 ~ defUpperStr ~ defUpperStr", defUpperStr('My text'))
 console.log("🚀 ~ file: main.js:57 ~ defUpperStr ~ defUpperStr", defUpperStr())
 
 /*
