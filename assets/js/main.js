@@ -261,21 +261,15 @@ console.log(oddFn(20));
 
 
 
-// let arr = [];
+var arr = [];
 
-// for (let i = 1; i <= 100; i++) {
-//     if (i % 2 === 0)
-//         arr.push(i)
-// }
+for (var i = 1; i <= 100; i++) {
+    if (i % 2 === 0)
+        arr.push(i)
+}
 
-// let arr = [];
+console.log(arr);
 
-// for (let i = 1; i <= 100; i++) {
-//     if (i % 2 !== 0)
-//         arr.push(i)
-// }
-
-// console.log(arr);
 // console.log(oddFn(10)); // [1, 3, 5, 7, 9]
 
 // console.log(oddFn(15)); // [1, 3, 5, 7, 9, 11, 13, 15]
