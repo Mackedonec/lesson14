@@ -172,7 +172,7 @@ function ageClassification(n3) {
                         : n3 < 75.01 ? 'пожилой возраст'
                             : n3 < 90.01 ? 'старческий возраст'
                                 : n3 < 122.01 ? 'долгожители'
-                                    : n3 < 150.01 ? null : n > 150.02
+                                    : n3 < 150.01 ? null : null
 }
 
 // console.log('-1 :', ageClassification(-1)); // -1 : null
