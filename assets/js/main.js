@@ -90,10 +90,16 @@ console.log("🚀 ~ file: main.js:57 ~ defUpperStr ~ defUpperStr", defUpperStr()
 
 // console.log(evenFn(20)); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
-function evenFn(n1) {
+function evenFn(n) {
+    var myarr = [];
 
+    for (var a = 1; a <= n; a++) if (a % 2 === 0) myarr.push(a);
+
+    return myarr;
 }
-
+console.log(evenFn(10))
+console.log(evenFn(15))
+console.log(evenFn(20))
 
 /*
  * #5
@@ -239,6 +245,37 @@ console.log('   150 :', ageClassification(150)); // 150 : null
  * oddFn(20) → [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
  */
 
+function oddFn(n4) {
+    var myarr2 = [];
+    var b = 0;
+
+    while (b++ < n4) { if (b % 2 !== 0) myarr2.push(b) };
+
+    return myarr2;
+}
+
+console.log(oddFn(10));
+console.log(oddFn(15));
+console.log(oddFn(20));
+
+
+
+
+// let arr = [];
+
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 2 === 0)
+//         arr.push(i)
+// }
+
+// let arr = [];
+
+// for (let i = 1; i <= 100; i++) {
+//     if (i % 2 !== 0)
+//         arr.push(i)
+// }
+
+// console.log(arr);
 // console.log(oddFn(10)); // [1, 3, 5, 7, 9]
 
 // console.log(oddFn(15)); // [1, 3, 5, 7, 9, 11, 13, 15]
