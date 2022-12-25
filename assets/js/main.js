@@ -10,6 +10,7 @@ console.log('Sample JavaScript #2 HW #14');
  * lastName – любая фамилия, строка
  * age – любой возраст, число
  */
+
 var userObj = {
     age: 999,
     firstName: 'MrFirst',
@@ -31,6 +32,7 @@ console.log("🚀 ~ file: main.js:21 ~ userObj", userObj)
  * userObj.lastName ← Фамилия'
  * userObj.fullName() → 'Имя Фамилия'.
  */
+
 console.log("🚀 ~ file: main.js:18 ~ userObj", userObj.fullName());
 
 /*
@@ -49,7 +51,14 @@ console.log("🚀 ~ file: main.js:18 ~ userObj", userObj.fullName());
 /* eslint-disable capitalized-comments */
 // console.log(defUpperStr('My text')); // MY TEXT
 
+function defUpperStr(myStr) {
+    return (myStr || 'Default text').toUpperCase();
+}
+
 // console.log(defUpperStr()); // DEFAULT TEXT
+
+console.log("🚀 ~ file: main.js:57 ~ defUpperStr ~ defUpperStr", defUpperStr('Some text'))
+console.log("🚀 ~ file: main.js:57 ~ defUpperStr ~ defUpperStr", defUpperStr())
 
 /*
  * #4
@@ -73,6 +82,11 @@ console.log("🚀 ~ file: main.js:18 ~ userObj", userObj.fullName());
 // console.log(evenFn(15)); // [2, 4, 6, 8, 10, 12, 14]
 
 // console.log(evenFn(20)); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+function evenFn(n) {
+
+}
+
 
 /*
  * #5
