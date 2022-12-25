@@ -55,6 +55,7 @@ console.log("🚀 ~ file: main.js:18 ~ userObj", userObj.fullName());
 // function defUpperStr(myStr) {
 //     return (myStr || 'Default text').toUpperCase();
 // }
+// console.log("🚀 ~ file: main.js:57 ~ defUpperStr ~ defUpperStr", defUpperStr('myStr'))
 
 function defUpperStr(myStr) {
     return (myStr || 'Default text').toUpperCase();
