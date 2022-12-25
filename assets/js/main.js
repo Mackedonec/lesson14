@@ -90,7 +90,7 @@ console.log("🚀 ~ file: main.js:57 ~ defUpperStr ~ defUpperStr", defUpperStr()
 
 // console.log(evenFn(20)); // [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 
-function evenFn(n) {
+function evenFn(n1) {
 
 }
 
@@ -110,17 +110,33 @@ function evenFn(n) {
  * В реализации функции обязательно должны быть использованы операторы switch / case / default.
  */
 
-// console.log(weekFn(1)); // 'Понедельник'
+function weekFn(n2) {
+    switch (n2) {
+        case 1: return 'Понедельник';
+        case 2: return 'Вторник';
+        case 3: return 'Среда';
+        case 4: return 'Четверг';
+        case 5: return 'Пятница';
+        case 6: return 'Суббота';
+        case 7: return 'Воскресенье';
+        default: return null;
+    }
+}
 
-// console.log(weekFn(3)); // 'Среда'
 
-// console.log(weekFn(7)); // 'Воскресенье'
 
-// console.log(weekFn(9)); // null
 
-// console.log(weekFn(1.5)); // null
+console.log(weekFn(1)); // 'Понедельник'
 
-// console.log(weekFn('2')); // null
+console.log(weekFn(3)); // 'Среда'
+
+console.log(weekFn(7)); // 'Воскресенье'
+
+console.log(weekFn(9)); // null
+
+console.log(weekFn(1.5)); // null
+
+console.log(weekFn('2')); // null
 
 /*
  * #6
@@ -141,33 +157,34 @@ function evenFn(n) {
  */
 
 
-function ageClassification(n) {
-    return n =
-        n < 0 ? null
-            : n < 24.01 ? 'детский возраст'
-                : n < 44.01 ? 'молодой возраст'
-                    : n < 65.01 ? 'средний возраст'
-                        : n < 75.01 ? 'пожилой возраст'
-                            : n < 90.01 ? 'старческий возраст'
-                                : n < 122.01 ? 'долгожители'
-                                    : n < 150.01 ? null : n > 150.02
+function ageClassification(n3) {
+    return n3 =
+        n3 < 0 ? null
+            : n3 < 24.01 ? 'детский возраст'
+                : n3 < 44.01 ? 'молодой возраст'
+                    : n3 < 65.01 ? 'средний возраст'
+                        : n3 < 75.01 ? 'пожилой возраст'
+                            : n3 < 90.01 ? 'старческий возраст'
+                                : n3 < 122.01 ? 'долгожители'
+                                    : n3 < 150.01 ? null : n > 150.02
 }
 
-console.log('    -1 :', ageClassification(-1)); // -1 : null
-console.log('     1 :', ageClassification(1)); // 1 : детский возраст
-console.log('    24 :', ageClassification(24)); // 24 : детский возраст
-console.log(' 24.01 :', ageClassification(24.01)); // 24.01 : молодой возраст
-console.log('    44 :', ageClassification(44)); // 44 : молодой возраст
-console.log(' 44.01 :', ageClassification(44.01)); // 44.01 : средний возраст
-console.log('    65 :', ageClassification(65)); // 65 : средний возраст
-console.log('  65.1 :', ageClassification(65.1)); // 65.1 : пожилой возраст
-console.log('    75 :', ageClassification(75)); // 75 : пожилой возраст
-console.log(' 75.01 :', ageClassification(75.01)); // 75.01 : старческий возраст
-console.log('    90 :', ageClassification(90)); // 90 : старческий возраст
-console.log(' 90.01 :', ageClassification(90.01)); // 90.01 : долгожители
-console.log('   122 :', ageClassification(122)); // 122 : долгожители
-console.log('122.01 :', ageClassification(122.01)); // 122.01 : null
-console.log('   150 :', ageClassification(150)); // 150 : null
+// console.log('-1 :', ageClassification(-1)); // -1 : null
+
+// console.log('5 :', ageClassification(5)); // 5 : детский возраст
+
+// console.log('34 :', ageClassification(34)); // 34 : молодой возраст
+
+// console.log('50 :', ageClassification(50)); // 50 : средний возраст
+
+// console.log('65.1 :', ageClassification(65.1)); // 65.1 : пожилой возраст
+
+// console.log('80 :', ageClassification(80)); // 80 : старческий возраст
+
+// console.log('110 :', ageClassification(110)); // 110 : долгожители
+
+// console.log('130 :', ageClassification(130)); // 130 : null
+
 
 /*
  * Блок тестирования:
@@ -187,6 +204,23 @@ console.log('   150 :', ageClassification(150)); // 150 : null
  * console.log(14, ageClassification(122.01) === null);
  * console.log(15, ageClassification(150) === null);
  */
+
+console.log('    -1 :', ageClassification(-1)); // -1 : null
+console.log('     1 :', ageClassification(1)); // 1 : детский возраст
+console.log('    24 :', ageClassification(24)); // 24 : детский возраст
+console.log(' 24.01 :', ageClassification(24.01)); // 24.01 : молодой возраст
+console.log('    44 :', ageClassification(44)); // 44 : молодой возраст
+console.log(' 44.01 :', ageClassification(44.01)); // 44.01 : средний возраст
+console.log('    65 :', ageClassification(65)); // 65 : средний возраст
+console.log('  65.1 :', ageClassification(65.1)); // 65.1 : пожилой возраст
+console.log('    75 :', ageClassification(75)); // 75 : пожилой возраст
+console.log(' 75.01 :', ageClassification(75.01)); // 75.01 : старческий возраст
+console.log('    90 :', ageClassification(90)); // 90 : старческий возраст
+console.log(' 90.01 :', ageClassification(90.01)); // 90.01 : долгожители
+console.log('   122 :', ageClassification(122)); // 122 : долгожители
+console.log('122.01 :', ageClassification(122.01)); // 122.01 : null
+console.log('   150 :', ageClassification(150)); // 150 : null
+
 
 /*
  * #7
