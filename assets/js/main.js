@@ -261,14 +261,14 @@ console.log(oddFn(20));
 
 
 
-var arr = [];
+// var arr = [];
 
-for (var i = 1; i <= 100; i++) {
-    if (i % 2 === 0)
-        arr.push(i)
-}
+// for (var i = 1; i <= 100; i++) {
+//     if (i % 2 !== 0)
+//         arr.push(i)
+// }
 
-console.log(arr);
+// console.log(arr);
 
 // console.log(oddFn(10)); // [1, 3, 5, 7, 9]
 
