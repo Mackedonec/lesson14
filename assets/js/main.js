@@ -93,7 +93,7 @@ console.log("🚀 ~ file: main.js:57 ~ defUpperStr ~ defUpperStr", defUpperStr()
 function evenFn(n) {
     var myarr = [];
 
-    for (var a = 1; a <= n; a++) if (a % 2 === 0) myarr.push(a);
+    for (var a = 2; a <= n; a += 2)  myarr.push(a);
 
     return myarr;
 }
@@ -247,9 +247,12 @@ console.log('   150 :', ageClassification(150)); // 150 : null
 
 function oddFn(n4) {
     var myarr2 = [];
-    var b = 0;
+    var b = 1;
 
-    while (b++ < n4) { if (b % 2 !== 0) myarr2.push(b) };
+    while (b <= n4) {
+        myarr2.push(b);
+        b += 2;
+    }
 
     return myarr2;
 }
@@ -261,12 +264,6 @@ console.log(oddFn(20));
 
 
 
-// var arr = [];
-
-// for (var i = 1; i <= 100; i++) {
-//     if (i % 2 !== 0)
-//         arr.push(i)
-// }
 
 // console.log(arr);
 
@@ -287,7 +284,15 @@ console.log(oddFn(20));
  * Реализуйте проверку: если третьим параметром передается не функция, нужно вернуть false.
  *
  */
+function mainFunc(a, b, cb) {
+    if ((typeof cb === "function")) {
+        return cb(a, b);
+    } else {
+        return false;
+    }
+}
 
+console.log(mainFunc(2, 5, 'not a func'))
 /*
  * реализуйте следующие функции, которые будут осуществлять механизм callback в основной функции,
  * возвращая ей результат собственного вычисления...
@@ -296,9 +301,33 @@ console.log(oddFn(20));
 
 // cbRandom(a, b) – вычисляет и возвращает произвольное целое число в диапазоне между a и b включительно.
 
+function cbRandom(a, b) {
+
+    return Math.round(Math.random() * (b - a + 1)) + a;
+}
+
+console.log(mainFunc(2, 5, cbRandom))
+
+// function cbRandom(a, b) {
+//     return Math.round(Math.random(a, b)) * (b - a) + a;
+// }
+// console.log(mainFunc(2, 5, cbRandom))
+
 // cbPow(a, b) – вычисляет и возвращает результат возведения числа a в степень b.
 
+function cbPow(a, b) {
+    return Math.pow(a, b)
+}
+
+console.log(mainFunc(2, 5, cbPow))
+
 // cbAdd(a, b) – вычисляет и возвращает сумму двух чисел a и b.
+
+function cbAdd(a, b) {
+    return (a + b)
+}
+
+console.log(mainFunc(2, 5, cbAdd))
 
 /*
  * mainFunc() должна возвращать результат работы переданной ей возвратной функции, например:
