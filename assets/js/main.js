@@ -312,8 +312,9 @@ console.log(mainFunc(2, 5, 'not a func'))
 // cbRandom(a, b) – вычисляет и возвращает произвольное целое число в диапазоне между a и b включительно.
 
 function cbRandom(a, b) {
-
-    return Math.round(Math.random() * (b - a + 1)) + a;
+    a = Math.ceil(a);
+    b = Math.floor(b);
+    return Math.floor(Math.random() * (b - a + 1)) + a;
 }
 
 console.log(mainFunc(2, 5, cbRandom))
